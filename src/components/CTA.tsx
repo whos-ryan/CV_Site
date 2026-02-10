@@ -4,11 +4,11 @@ export function CTA() {
   return (
     <section className="py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-12 md:p-16 text-center">
+        <div className="bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 rounded-2xl p-12 md:p-16 text-center">
           <h2 className="text-4xl md:text-5xl mb-6 text-white">
             Let's work together
           </h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 dark:text-blue-200 mb-10 max-w-2xl mx-auto">
             Have a project in mind? I'd love to hear about it and discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
