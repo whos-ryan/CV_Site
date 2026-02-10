@@ -34,7 +34,7 @@ export function Hero() {
                 <div className="h-3 bg-blue-600 dark:bg-blue-500 rounded-full"></div>
                 <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
               </div>
-              <div className="space-y-4">
+              <div className="flex flex-col gap-4">
                 <div className="h-12 bg-gray-100 dark:bg-gray-700 rounded-lg"></div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="h-32 bg-blue-50 dark:bg-blue-900/20 rounded-lg"></div>
