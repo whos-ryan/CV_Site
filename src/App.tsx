@@ -9,7 +9,7 @@ import { ThemeProvider } from './components/ThemeProvider';
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+      <div className="min-h-screen bg-background text-foreground transition-colors">
         <Navigation />
         <Hero />
         <Features />

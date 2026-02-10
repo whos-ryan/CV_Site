@@ -19,7 +19,7 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             <a href="#work" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
               Work
             </a>
@@ -62,7 +62,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-100 dark:border-gray-800">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col gap-4">
               <a href="#work" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
                 Work
               </a>
