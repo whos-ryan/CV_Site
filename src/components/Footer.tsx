@@ -1,8 +1,8 @@
-import { Twitter, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const footerLinks = {
   Navigation: ['Work', 'Skills', 'About', 'Contact'],
-  Connect: ['Twitter', 'GitHub', 'LinkedIn', 'Email'],
+  Connect: ['GitHub', 'LinkedIn', 'Email'],
 };
 
 export function Footer() {
@@ -22,16 +22,13 @@ export function Footer() {
               Building exceptional digital experiences with precision and care.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="GitHub">
                 <Github size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>
@@ -41,7 +38,7 @@ export function Footer() {
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3 className="font-semibold mb-4">{category}</h3>
-              <ul className="space-y-3">
+              <ul className="flex flex-col gap-3">
                 {links.map((link) => (
                   <li key={link}>
                     <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
@@ -56,7 +53,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-gray-800 dark:border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 dark:text-gray-500 text-sm">
-            © 2026 All rights reserved.
+            &copy; 2026 All rights reserved.
           </p>
           <p className="text-gray-400 dark:text-gray-500 text-sm">
             Designed & Built with passion
