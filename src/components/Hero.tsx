@@ -6,20 +6,17 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 text-black dark:text-white">
-            Designer. Developer.
-            <span className="block text-blue-600 dark:text-blue-500">Creator.</span>
+            Ryan Kelly
+            <span className="block text-blue-600 dark:text-blue-500">Software Engineer.</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
             Crafting exceptional digital experiences with clean code and beautiful design. 
-            I build products that people love to use.
+            
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-              View Work
+              View My Work
               <ArrowRight size={20} />
-            </button>
-            <button className="px-8 py-4 bg-white dark:bg-gray-800 text-black dark:text-white border-2 border-black dark:border-white rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-              Contact Me
             </button>
           </div>
         </div>

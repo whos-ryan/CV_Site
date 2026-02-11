@@ -22,10 +22,10 @@ export function Footer() {
               Building exceptional digital experiences with precision and care.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="GitHub">
+              <a href="https://github.com/whos-ryan" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="GitHub">
                 <Github size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/ryan-kelly-841201283/" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
               <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
@@ -41,7 +41,7 @@ export function Footer() {
               <ul className="flex flex-col gap-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                    <a href= "#" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
                       {link}
                     </a>
                   </li>
