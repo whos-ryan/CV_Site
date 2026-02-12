@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { ScrollToTop } from './components/ScrollToTop';
+import { ScrollToTopButton } from './components/ScrollToTopButton';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
+          <ScrollToTopButton />
         </div>
       </ThemeProvider>
     </BrowserRouter>

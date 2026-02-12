@@ -45,6 +45,8 @@ export function Projects() {
             <a
               key={index}
               href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group block bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-blue-600 dark:hover:border-blue-500 transition-colors"
             >
               <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden">

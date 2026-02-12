@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const footerNavLinks = [
   { label: 'Work', href: '/#work', isRoute: false },
-  { label: 'Skills', href: '/#skills', isRoute: false },
   { label: 'About', href: '/about', isRoute: true },
   { label: 'Contact', href: '/contact', isRoute: true },
 ];
