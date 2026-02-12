@@ -1,9 +1,17 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
-const footerLinks = {
-  Navigation: ['Work', 'Skills', 'About', 'Contact'],
-  Connect: ['GitHub', 'LinkedIn', 'Email'],
-};
+const footerNavLinks = [
+  { label: 'Work', href: '#work' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
+];
+
+const footerConnectLinks = [
+  { label: 'GitHub', href: 'https://github.com/whos-ryan' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ryan-kelly-841201283/' },
+  { label: 'Email', href: 'mailto:ryankelly@example.com' },
+];
 
 export function Footer() {
   return (
@@ -34,21 +42,33 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="font-semibold mb-4">{category}</h3>
-              <ul className="flex flex-col gap-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href= "#" className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Navigation Links */}
+          <div>
+            <h3 className="font-semibold mb-4">Navigation</h3>
+            <ul className="flex flex-col gap-3">
+              {footerNavLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Connect Links */}
+          <div>
+            <h3 className="font-semibold mb-4">Connect</h3>
+            <ul className="flex flex-col gap-3">
+              {footerConnectLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="pt-8 border-t border-gray-800 dark:border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4">
