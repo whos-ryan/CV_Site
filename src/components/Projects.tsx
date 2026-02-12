@@ -2,10 +2,10 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A brief description of this project and the technologies used.',
-    image: '',
-    href: '#',
+    title: 'Marcus Aurelius AI Chatbot',
+    description: 'This was a small university collaborative project that we created for our L5 Software Engineering Course. ',
+    image: 'icons/marcus-aurelius.png',
+    href: 'https://marcusaurelius-client.vercel.app',
   },
   {
     title: 'Project Two',
