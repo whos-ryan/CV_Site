@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const footerNavLinks = [
@@ -23,7 +23,7 @@ export function Footer() {
           <div>
             <Link to="/" className="flex items-center mb-4">
               <div className="w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-md flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-sm"></div>
+                <Code size={18} className="text-white" />
               </div>
               <span className="ml-3 font-semibold">Rhyze</span>
             </Link>

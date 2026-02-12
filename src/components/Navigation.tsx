@@ -1,4 +1,4 @@
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, Code } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from './ThemeProvider';
@@ -16,7 +16,7 @@ export function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <div className="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center">
-              <div className="w-4 h-4 bg-white rounded-sm"></div>
+              <Code size={18} className="text-white" />
             </div>
             <span className="ml-3 font-semibold text-black dark:text-white">Rhyze</span>
           </Link>
