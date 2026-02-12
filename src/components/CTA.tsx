@@ -1,4 +1,5 @@
 import { ArrowRight, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function CTA() {
   return (
@@ -12,10 +13,10 @@ export function CTA() {
             Have a project in mind? I'd love to hear about it and discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-md hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+            <Link to="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-md hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               <Mail size={20} />
               Get in Touch
-            </button>
+            </Link>
             <button className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-md hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
               View Resume
               <ArrowRight size={20} />
