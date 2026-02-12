@@ -1,10 +1,11 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const footerNavLinks = [
-  { label: 'Work', href: '#work' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Work', href: '/#work', isRoute: false },
+  { label: 'Skills', href: '/#skills', isRoute: false },
+  { label: 'About', href: '/about', isRoute: true },
+  { label: 'Contact', href: '/contact', isRoute: true },
 ];
 
 const footerConnectLinks = [
@@ -20,12 +21,12 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <div className="w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-md flex items-center justify-center">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
               </div>
               <span className="ml-3 font-semibold">Rhyze</span>
-            </div>
+            </Link>
             <p className="text-gray-400 dark:text-gray-500 mb-6">
               Building exceptional digital experiences with precision and care.
             </p>
@@ -36,7 +37,7 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/ryan-kelly-841201283/" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
+              <a href="mailto:ryankelly@example.com" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>
@@ -48,9 +49,15 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {footerNavLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
-                    {link.label}
-                  </a>
+                  {link.isRoute ? (
+                    <Link to={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
