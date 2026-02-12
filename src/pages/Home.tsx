@@ -8,9 +8,9 @@ export function Home() {
   return (
     <>
       <Hero />
-      <Projects />
       <Features />
       <Stats />
+      <Projects />
       <CTA />
     </>
   );

@@ -33,29 +33,7 @@ export function Hero() {
               <ArrowRight size={20} />
             </button>
           </div>
-        </div>
-
-        {/* Hero Visual */}
-        <div className="mt-20 max-w-5xl mx-auto">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl transform rotate-1"></div>
-            <div className="relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 md:p-12 shadow-xl">
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                <div className="h-3 bg-blue-600 dark:bg-blue-500 rounded-full"></div>
-                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="h-12 bg-gray-100 dark:bg-gray-700 rounded-lg"></div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="h-32 bg-blue-50 dark:bg-blue-900/20 rounded-lg"></div>
-                  <div className="h-32 bg-gray-100 dark:bg-gray-700 rounded-lg"></div>
-                </div>
-                <div className="h-20 bg-gray-100 dark:bg-gray-700 rounded-lg"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> 
       </div>
     </section>
   );
