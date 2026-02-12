@@ -89,5 +89,6 @@
 
   html {
     @apply text-sm font-sans;
+    scroll-behavior: smooth;
   }
 }

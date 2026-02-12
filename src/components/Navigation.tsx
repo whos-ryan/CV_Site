@@ -32,15 +32,6 @@ export function Navigation() {
                 Work
               </Link>
             )}
-            {isHome ? (
-              <a href="#skills" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
-                Skills
-              </a>
-            ) : (
-              <Link to="/#skills" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
-                Skills
-              </Link>
-            )}
             <Link to="/about" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
               About
             </Link>
@@ -85,15 +76,6 @@ export function Navigation() {
               ) : (
                 <Link to="/#work" onClick={() => setIsOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
                   Work
-                </Link>
-              )}
-              {isHome ? (
-                <a href="#skills" onClick={() => setIsOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
-                  Skills
-                </a>
-              ) : (
-                <Link to="/#skills" onClick={() => setIsOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
-                  Skills
                 </Link>
               )}
               <Link to="/about" onClick={() => setIsOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
