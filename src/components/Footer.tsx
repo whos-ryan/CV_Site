@@ -10,7 +10,7 @@ const footerNavLinks = [
 const footerConnectLinks = [
   { label: 'GitHub', href: 'https://github.com/whos-ryan' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ryan-kelly-841201283/' },
-  { label: 'Email', href: 'mailto:ryankelly@example.com' },
+  { label: 'Email', href: 'mailto:ryankelly4553@gmail.com' },
 ];
 
 export function Footer() {
@@ -36,7 +36,7 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/ryan-kelly-841201283/" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:ryankelly@example.com" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
+              <a href="mailto:ryankelly4553@gmail.com" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>

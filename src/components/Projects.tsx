@@ -8,10 +8,10 @@ const projects = [
     href: 'https://marcusaurelius-client.vercel.app',
   },
   {
-    title: 'Project Two',
-    description: 'A brief description of this project and the technologies used.',
+    title: 'Recipe Web',
+    description: 'A small full stack project made with C#, HTML, and CSS.',
     image: '',
-    href: '#',
+    href: 'https://recipeweb-production.up.railway.app',
   },
   {
     title: 'Project Three',
