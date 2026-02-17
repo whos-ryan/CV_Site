@@ -10,7 +10,7 @@ const projects = [
   {
     title: 'Recipe Web',
     description: 'A small full stack project made with C#, HTML, and CSS.',
-    image: '',
+    image: 'icons/recipeManager.png',
     href: 'https://recipeweb-production.up.railway.app',
   },
   {
