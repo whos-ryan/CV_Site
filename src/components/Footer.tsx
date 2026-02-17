@@ -82,7 +82,7 @@ export function Footer() {
             &copy; 2026 All rights reserved.
           </p>
           <p className="text-gray-400 dark:text-gray-500 text-sm">
-            Designed & Built with passion
+            Designed & Built In Bournemouth
           </p>
         </div>
       </div>
