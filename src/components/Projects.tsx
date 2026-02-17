@@ -95,44 +95,33 @@ export function Projects() {
   return (
     <section id="work" className="py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
-              My Projects
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
-              A selection of recent work and personal projects
-            </p>
-          </div>
-
-          <div className="hidden md:flex items-center gap-2">
-            <button
-              onClick={() => scrollTo('left')}
-              disabled={!canScrollLeft}
-              aria-label="Previous project"
-              className="p-3 rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-200 dark:disabled:hover:border-gray-700 disabled:hover:text-gray-600 dark:disabled:hover:text-gray-300"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={() => scrollTo('right')}
-              disabled={!canScrollRight}
-              aria-label="Next project"
-              className="p-3 rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-200 dark:disabled:hover:border-gray-700 disabled:hover:text-gray-600 dark:disabled:hover:text-gray-300"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
+            My Projects
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+            A selection of recent work and personal projects
+          </p>
         </div>
 
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
-          style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-          }}
-        >
+        <div className="relative group/carousel">
+          <button
+            onClick={() => scrollTo('left')}
+            disabled={!canScrollLeft}
+            aria-label="Previous project"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 p-3 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 shadow-lg hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-500 transition-all disabled:opacity-0 disabled:pointer-events-none items-center justify-center"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
+          >
           {projects.map((project, index) => (
             <a
               key={index}
@@ -170,6 +159,16 @@ export function Projects() {
               </div>
             </a>
           ))}
+          </div>
+
+          <button
+            onClick={() => scrollTo('right')}
+            disabled={!canScrollRight}
+            aria-label="Next project"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 p-3 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 shadow-lg hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-500 transition-all disabled:opacity-0 disabled:pointer-events-none items-center justify-center"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
 
         {/* Dot indicators */}
