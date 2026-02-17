@@ -7,7 +7,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="py-20 px-6 lg:px-8 bg-black dark:bg-gray-950 transition-colors">
+    <section className="py-20 px-6 lg:px-8 bg-gray-50 dark:bg-gray-950 transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
@@ -15,7 +15,7 @@ export function Stats() {
               <div className="text-4xl md:text-5xl mb-2 text-blue-600 dark:text-blue-500">
                 {stat.value}
               </div>
-              <div className="text-gray-400 dark:text-gray-500">
+              <div className="text-gray-600 dark:text-gray-500">
                 {stat.label}
               </div>
             </div>
