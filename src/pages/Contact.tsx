@@ -11,7 +11,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:ryankelly@example.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    window.location.href = `mailto:ryan.kelly4553@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
   };
 
   return (
@@ -99,11 +99,11 @@ export function Contact() {
               <h3 className="text-lg font-medium text-black dark:text-white mb-4">Connect</h3>
               <div className="flex flex-col gap-4">
                 <a
-                  href="mailto:ryankelly@example.com"
+                  href="mailto:ryan.kelly4553@gmail.com"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
                 >
                   <Mail size={18} />
-                  <span>ryankelly@example.com</span>
+                  <span>ryan.kelly4553@gmail.com</span>
                 </a>
                 <a
                   href="https://github.com/whos-ryan"
