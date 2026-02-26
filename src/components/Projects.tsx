@@ -15,10 +15,10 @@ const projects = [
     href: 'https://recipeweb-production.up.railway.app',
   },
   {
-    title: 'Project Three',
-    description: 'A brief description of this project and the technologies used.',
-    image: '',
-    href: '#',
+    title: 'Assignment Tracker',
+    description: 'A small web application to help student track their grades within each individual module. Built using React, TypeScript, and CSS',
+    image: 'icons/AssignmentAppTracker.png',
+    href: 'https://app-tracker-black.vercel.app',
   },
   {
     title: 'Project Four',
