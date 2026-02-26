@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
+import { Link } from 'react-router-dom';
 
 export function Hero() {
   const { displayedText: nameText, isComplete: nameComplete } = useTypingEffect('Ryan Kelly', 90, 400);
@@ -28,10 +29,12 @@ export function Hero() {
             
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+           <Link to="/about">
+             <button className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               About Me
               <ArrowRight size={20} />
             </button>
+            </Link>
           </div>
         </div> 
       </div>
