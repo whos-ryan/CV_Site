@@ -38,7 +38,7 @@ export function About() {
         {/* Back link */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-gray-800 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-12"
         >
           <ArrowLeft size={18} />
           Back to Home
@@ -49,7 +49,7 @@ export function About() {
           <h1 className="text-5xl md:text-6xl mb-6 text-black dark:text-white text-balance">
             About Me
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
+          <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-3xl">
             I'm Ryan Kelly, a software engineer passionate about building clean, performant, and user-friendly web experiences.
             I enjoy turning complex problems into simple, elegant solutions.
           </p>
@@ -58,7 +58,7 @@ export function About() {
         {/* Bio */}
         <section className="mb-20">
           <h2 className="text-2xl mb-6 text-black dark:text-white">My Story</h2>
-          <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+          <div className="flex flex-col gap-4 text-gray-800 dark:text-gray-300 leading-relaxed">
             <p>
               My interest in technology started early, but it was the intersection of design and engineering that truly captivated me.
               I love the process of taking an idea from concept to a polished, working product.
@@ -84,7 +84,7 @@ export function About() {
                 </div>
                 <div>
                   <h3 className="text-black dark:text-white mb-1">{tech.label}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{tech.description}</p>
+                  <p className="text-sm text-gray-800 dark:text-gray-400">{tech.description}</p>
                 </div>
               </div>
             ))}
@@ -106,7 +106,7 @@ export function About() {
                 <div className="pb-8">
                   <span className="text-sm text-blue-600 dark:text-blue-500 font-medium">{item.year}</span>
                   <h3 className="text-lg text-black dark:text-white mt-1 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
+                  <p className="text-gray-800 dark:text-gray-400">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -116,7 +116,7 @@ export function About() {
         {/* CTA */}
         <section className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 text-center">
           <h2 className="text-2xl mb-4 text-black dark:text-white">Want to work together?</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          <p className="text-gray-800 dark:text-gray-300 mb-6">
             I'm always open to new opportunities and interesting projects.
           </p>
           <Link

@@ -20,7 +20,7 @@ export function Contact() {
         {/* Back link */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-gray-800 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-12"
         >
           <ArrowLeft size={18} />
           Back to Home
@@ -31,7 +31,7 @@ export function Contact() {
           <h1 className="text-5xl md:text-6xl mb-6 text-black dark:text-white text-balance">
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
+          <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-3xl">
             Have a project in mind or just want to say hello? I'd love to hear from you.
             Fill out the form below or reach out through any of my socials.
           </p>
@@ -100,7 +100,7 @@ export function Contact() {
               <div className="flex flex-col gap-4">
                 <a
                   href="mailto:ryan.kelly4553@gmail.com"
-                  className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                  className="flex items-center gap-3 text-gray-800 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
                 >
                   <Mail size={18} />
                   <span>ryan.kelly4553@gmail.com</span>
@@ -109,7 +109,7 @@ export function Contact() {
                   href="https://github.com/whos-ryan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                  className="flex items-center gap-3 text-gray-800 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
                 >
                   <Github size={18} />
                   <span>github.com/whos-ryan</span>
@@ -118,12 +118,12 @@ export function Contact() {
                   href="https://www.linkedin.com/in/ryan-kelly-841201283/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                  className="flex items-center gap-3 text-gray-800 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
                 >
                   <Linkedin size={18} />
                   <span>LinkedIn</span>
                 </a>
-                <div className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
+                <div className="flex items-center gap-3 text-gray-800 dark:text-gray-400">
                   <MapPin size={18} />
                   <span>Available for remote work</span>
                 </div>
@@ -132,7 +132,7 @@ export function Contact() {
 
             <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800">
               <h3 className="text-lg font-medium text-black dark:text-white mb-2">Availability</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-800 dark:text-gray-400 text-sm leading-relaxed">
                 I'm currently open to freelance projects and full-time opportunities.
                 Typical response time is within 24 hours.
               </p>

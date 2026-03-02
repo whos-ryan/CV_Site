@@ -100,7 +100,7 @@ export function Projects() {
           <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
             My Projects
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
             A selection of recent work and personal projects
           </p>
         </div>
@@ -156,7 +156,7 @@ export function Projects() {
                       className="text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors"
                     />
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-gray-800 dark:text-gray-300">
                     {project.description}
                   </p>
                 </div>

@@ -31,7 +31,7 @@ export function Features() {
           <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
             What I Do
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
             Combining technical expertise with creative vision
           </p>
         </div>

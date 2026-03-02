@@ -89,27 +89,7 @@
 
   /* make paragraphs darker in light mode for readability */
   body:not(.dark) p {
-    color: #1b1813;
-  }
-
-  /* make all text darker and bolder in light mode */
-  body:not(.dark) {
-    color: #000000;
-    font-weight: 600;
-  }
-
-  body:not(.dark) a,
-  body:not(.dark) h1,
-  body:not(.dark) h2,
-  body:not(.dark) h3,
-  body:not(.dark) h4,
-  body:not(.dark) h5,
-  body:not(.dark) h6,
-  body:not(.dark) p,
-  body:not(.dark) span,
-  body:not(.dark) li,
-  body:not(.dark) button {
-    font-weight: 600;
+    color: #1a1a1a;
   }
 
   html {
