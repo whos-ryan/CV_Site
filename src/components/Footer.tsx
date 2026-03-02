@@ -15,7 +15,7 @@ const footerConnectLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-transparent dark:bg-transparent text-white py-16 px-6 lg:px-8 transition-colors">
+    <footer className="text-white py-16 px-6 lg:px-8 transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
