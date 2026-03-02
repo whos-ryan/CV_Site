@@ -148,7 +148,7 @@ const Grainient = ({
   color2 = '#5227FF',
   color3 = '#B19EEF',
   className = ''
-}) => {
+}: GrainientProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
