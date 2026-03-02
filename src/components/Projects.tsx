@@ -131,7 +131,7 @@ export function Projects() {
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex-shrink-0 w-[85%] md:w-[48%] lg:w-[42%] snap-start bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-blue-600 dark:hover:border-blue-500 transition-colors"
+                className="group flex-shrink-0 w-[85%] md:w-[48%] lg:w-[42%] snap-start bg-white/30 dark:bg-gray-900/30 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-blue-600 dark:hover:border-blue-500 transition-colors"
               >
                 <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
                   {project.image ? (

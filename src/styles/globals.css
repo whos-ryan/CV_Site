@@ -32,7 +32,7 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --radius: 8px;
 
-  --background: #fafafa;
+  --background: transparent;
   --foreground: #171717;
   --card: #ffffff;
   --card-foreground: #171717;
@@ -55,7 +55,7 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: transparent;
   --foreground: #fafafa;
   --card: #171717;
   --card-foreground: #fafafa;
@@ -87,8 +87,39 @@
     @apply bg-background text-foreground font-sans antialiased leading-normal;
   }
 
+  /* make paragraphs darker in light mode for readability */
+  body:not(.dark) p {
+    color: #1b1813;
+  }
+
+  /* make all text darker and bolder in light mode */
+  body:not(.dark) {
+    color: #000000;
+    font-weight: 600;
+  }
+
+  body:not(.dark) a,
+  body:not(.dark) h1,
+  body:not(.dark) h2,
+  body:not(.dark) h3,
+  body:not(.dark) h4,
+  body:not(.dark) h5,
+  body:not(.dark) h6,
+  body:not(.dark) p,
+  body:not(.dark) span,
+  body:not(.dark) li,
+  body:not(.dark) button {
+    font-weight: 600;
+  }
+
   html {
     @apply text-sm font-sans;
     scroll-behavior: smooth;
   }
+}
+
+.darkveil-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }

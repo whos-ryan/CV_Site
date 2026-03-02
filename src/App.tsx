@@ -12,7 +12,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
-        <div className="min-h-screen bg-background text-foreground transition-colors">
+        <div className="min-h-screen bg-background text-foreground transition-colors" style={{ position: 'relative', zIndex: 10 }}>
           <ScrollToTop />
           <Navigation />
           <Routes>

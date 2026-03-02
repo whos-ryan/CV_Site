@@ -5,7 +5,7 @@ export function CTA() {
   return (
     <section className="py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 rounded-2xl p-12 md:p-16 text-center">
+        <div className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-2xl p-12 md:p-16 text-center border border-white/50 dark:border-gray-700">
           <h2 className="text-4xl md:text-5xl mb-6 text-white">
             Let's work together
           </h2>

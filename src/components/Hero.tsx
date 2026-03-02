@@ -24,13 +24,13 @@ export function Hero() {
               )}
             </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-[#1E293B] dark:text-gray-300 mb-10 max-w-2xl mx-auto">
             Crafting exceptional digital experiences with clean code and beautiful design. 
             
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
            <Link to="/about">
-             <button className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+             <button className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:scale-105 transform transition duration-150 flex items-center justify-center gap-2">
               About Me
               <ArrowRight size={20} />
             </button>

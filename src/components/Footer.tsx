@@ -15,7 +15,7 @@ const footerConnectLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-black dark:bg-gray-950 text-white py-16 px-6 lg:px-8 transition-colors">
+    <footer className="bg-transparent dark:bg-transparent text-white py-16 px-6 lg:px-8 transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -30,13 +30,13 @@ export function Footer() {
               Building exceptional digital experiences with precision and care.
             </p>
             <div className="flex gap-4">
-              <a href="https://github.com/whos-ryan" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="GitHub">
+              <a href="https://github.com/whos-ryan" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="GitHub">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/ryan-kelly-841201283/" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/ryan-kelly-841201283/" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:ryankelly4553@gmail.com" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
+              <a href="mailto:ryankelly4553@gmail.com" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>

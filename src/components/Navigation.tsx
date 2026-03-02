@@ -10,11 +10,11 @@ export function Navigation() {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 z-50 transition-colors">
+    <nav className="fixed top-0 left-0 right-0 bg-white/20 backdrop-blur-md dark:bg-transparent border-b border-gray-100 dark:border-gray-800 z-50 transition-colors">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center text-black">
             <div className="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center">
               <Code size={18} className="text-white" />
             </div>
@@ -24,7 +24,7 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {isHome ? (
-              <a href="#work" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
+              <a href="#work" className="text-black dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
                 Work
               </a>
             ) : (
@@ -32,10 +32,10 @@ export function Navigation() {
                 Work
               </Link>
             )}
-            <Link to="/about" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
+            <Link to="/about" className="text-black dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
               About
             </Link>
-            <Link to="/contact" className="px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+            <Link to="/contact" className="px-5 py-2 bg-black text-white rounded-md hover:scale-105 transform transition duration-150">
               Contact
             </Link>
             <button
@@ -81,7 +81,7 @@ export function Navigation() {
               <Link to="/about" onClick={() => setIsOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">
                 About
               </Link>
-              <Link to="/contact" onClick={() => setIsOpen(false)} className="px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors w-full text-center">
+              <Link to="/contact" onClick={() => setIsOpen(false)} className="px-5 py-2 bg-black text-white rounded-md hover:scale-105 transform transition duration-150 w-full text-center">
                 Contact
               </Link>
             </div>
