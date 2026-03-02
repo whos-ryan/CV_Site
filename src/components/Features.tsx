@@ -25,13 +25,13 @@ const skills = [
 
 export function Features() {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-8 bg-transparent dark:bg-transparent transition-colors">
+    <section id="skills" className="py-20 px-6 lg:px-8 transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
             What I Do
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
             Combining technical expertise with creative vision
           </p>
         </div>

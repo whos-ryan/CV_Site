@@ -15,7 +15,7 @@ const footerConnectLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-transparent dark:bg-transparent text-white py-16 px-6 lg:px-8 transition-colors">
+    <footer className="text-white py-16 px-6 lg:px-8 transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -26,7 +26,7 @@ export function Footer() {
               </div>
               <span className="ml-3 font-semibold">Rhyze</span>
             </Link>
-            <p className="text-gray-400 dark:text-gray-500 mb-6">
+            <p className="text-gray-700 dark:text-gray-500 mb-6">
               Building exceptional digital experiences with precision and care.
             </p>
             <div className="flex gap-4">
@@ -49,11 +49,11 @@ export function Footer() {
               {footerNavLinks.map((link) => (
                 <li key={link.label}>
                   {link.isRoute ? (
-                    <Link to={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                    <Link to={link.href} className="text-gray-700 dark:text-gray-500 hover:text-white transition-colors">
                       {link.label}
                     </Link>
                   ) : (
-                    <a href={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                    <a href={link.href} className="text-gray-700 dark:text-gray-500 hover:text-white transition-colors">
                       {link.label}
                     </a>
                   )}
@@ -68,7 +68,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {footerConnectLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-gray-400 dark:text-gray-500 hover:text-white transition-colors">
+                  <a href={link.href} className="text-gray-700 dark:text-gray-500 hover:text-white transition-colors">
                     {link.label}
                   </a>
                 </li>
@@ -78,10 +78,10 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-gray-800 dark:border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 dark:text-gray-500 text-sm">
+          <p className="text-gray-700 dark:text-gray-500 text-sm">
             &copy; 2026 All rights reserved.
           </p>
-          <p className="text-gray-400 dark:text-gray-500 text-sm">
+          <p className="text-gray-700 dark:text-gray-500 text-sm">
             Designed & Built In Bournemouth
           </p>
         </div>

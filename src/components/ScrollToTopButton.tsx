@@ -6,46 +6,21 @@ export function ScrollToTopButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      console.log("[v0] scrollY:", scrollY);
-      setVisible(scrollY > 200);
+      setVisible(window.scrollY > 200);
     };
 
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   if (!visible) return null;
 
   return (
     <button
-      onClick={scrollToTop}
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Scroll to top"
-      style={{
-        position: 'fixed',
-        bottom: '1.5rem',
-        right: '1.5rem',
-        zIndex: 9999,
-        padding: '0.75rem',
-        borderRadius: '9999px',
-        backgroundColor: '#2563eb',
-        color: '#fff',
-        border: 'none',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-        cursor: 'pointer',
-        transition: 'background-color 0.2s',
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#1d4ed8')}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#2563eb')}
+      className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-colors"
     >
       <ArrowUp size={20} />
     </button>

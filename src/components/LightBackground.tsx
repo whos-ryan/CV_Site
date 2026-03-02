@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 
 interface GrainientProps {
@@ -124,7 +124,7 @@ void main(){
 }
 `;
 
-const Grainient: React.FC<GrainientProps> = ({
+const Grainient = ({
   timeSpeed = 0.25,
   colorBalance = 0.0,
   warpStrength = 1.0,
@@ -148,7 +148,7 @@ const Grainient: React.FC<GrainientProps> = ({
   color2 = '#5227FF',
   color3 = '#B19EEF',
   className = ''
-}) => {
+}: GrainientProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
