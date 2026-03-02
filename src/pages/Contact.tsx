@@ -95,7 +95,7 @@ export function Contact() {
 
           {/* Contact Info Sidebar */}
           <aside className="lg:col-span-2 flex flex-col gap-6">
-            <div className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+            <div className="p-6 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl border border-white/50 dark:border-gray-700">
               <h3 className="text-lg font-medium text-black dark:text-white mb-4">Connect</h3>
               <div className="flex flex-col gap-4">
                 <a
@@ -130,7 +130,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800">
+            <div className="p-6 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl border border-white/50 dark:border-gray-700">
               <h3 className="text-lg font-medium text-black dark:text-white mb-2">Availability</h3>
               <p className="text-gray-800 dark:text-gray-400 text-sm leading-relaxed">
                 I'm currently open to freelance projects and full-time opportunities.

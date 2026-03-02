@@ -77,7 +77,7 @@ export function About() {
             {techStack.map((tech, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700"
+                className="flex items-start gap-4 p-6 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl border border-white/50 dark:border-gray-700"
               >
                 <div className="w-10 h-10 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center shrink-0">
                   <tech.icon className="text-white" size={20} />
@@ -114,7 +114,7 @@ export function About() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700 text-center">
+        <section className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/50 dark:border-gray-700 text-center">
           <h2 className="text-2xl mb-4 text-black dark:text-white">Want to work together?</h2>
           <p className="text-gray-800 dark:text-gray-300 mb-6">
             I'm always open to new opportunities and interesting projects.
