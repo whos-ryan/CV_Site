@@ -17,10 +17,18 @@ export function CTA() {
               <Mail size={20} />
               Get in Touch
             </Link>
-            <button className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-md hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
+            
+            {/* Replaced <button> with <a> tag below */}
+            <a 
+              href="public/files/CV_Ryan.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-md hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
+            >
               View Resume
               <ArrowRight size={20} />
-            </button>
+            </a>
+            
           </div>
         </div>
       </div>
