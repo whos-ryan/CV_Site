@@ -14,34 +14,36 @@ export function Contact() {
     window.location.href = `mailto:ryan.kelly4553@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
   };
 
+  const inputClass =
+    'w-full px-4 py-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-neutral-900 dark:focus:border-neutral-100 transition-colors';
+
   return (
-    <main className="pt-24 pb-20 px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Back link */}
+    <main className="pt-32 pb-24 px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-gray-800 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors mb-16"
         >
-          <ArrowLeft size={18} />
-          Back to Home
+          <ArrowLeft size={16} />
+          Back to home
         </Link>
 
-        {/* Header */}
         <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl mb-6 text-black dark:text-white text-balance">
-            Get in Touch
+          <p className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-3">
+            Contact
+          </p>
+          <h1 className="text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-neutral-100 mb-8 font-medium">
+            Get in touch
           </h1>
-          <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-3xl">
-            Have a project in mind or just want to say hello? I'd love to hear from you.
-            Fill out the form below or reach out through any of my socials.
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            I'm looking for my first junior developer role. Drop me a message below or reach me directly.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="lg:col-span-3 flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="lg:col-span-3 flex flex-col gap-5">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-black dark:text-white mb-2">
+              <label htmlFor="name" className="block text-sm text-neutral-900 dark:text-neutral-100 mb-2">
                 Name
               </label>
               <input
@@ -51,12 +53,12 @@ export function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-colors"
+                className={inputClass}
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-black dark:text-white mb-2">
+              <label htmlFor="email" className="block text-sm text-neutral-900 dark:text-neutral-100 mb-2">
                 Email
               </label>
               <input
@@ -66,12 +68,12 @@ export function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-colors"
+                className={inputClass}
                 placeholder="your@email.com"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-black dark:text-white mb-2">
+              <label htmlFor="message" className="block text-sm text-neutral-900 dark:text-neutral-100 mb-2">
                 Message
               </label>
               <textarea
@@ -81,61 +83,47 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                placeholder="Tell me about your project..."
+                className={`${inputClass} resize-none`}
+                placeholder="Tell me about the role…"
               />
             </div>
             <button
               type="submit"
-              className="px-8 py-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors self-start"
+              className="self-start inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-neutral-100 text-neutral-50 dark:text-neutral-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
             >
-              Send Message
+              Send message
             </button>
           </form>
 
-          {/* Contact Info Sidebar */}
-          <aside className="lg:col-span-2 flex flex-col gap-6">
-            <div className="p-6 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl border border-white/50 dark:border-gray-700">
-              <h3 className="text-lg font-medium text-black dark:text-white mb-4">Connect</h3>
-              <div className="flex flex-col gap-4">
-                <a
-                  href="mailto:ryan.kelly4553@gmail.com"
-                  className="flex items-center gap-3 text-gray-800 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
-                >
-                  <Mail size={18} />
-                  <span>ryan.kelly4553@gmail.com</span>
-                </a>
-                <a
-                  href="https://github.com/whos-ryan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-800 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
-                >
-                  <Github size={18} />
-                  <span>github.com/whos-ryan</span>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/ryan-kelly-841201283/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-800 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
-                >
-                  <Linkedin size={18} />
-                  <span>LinkedIn</span>
-                </a>
-                <div className="flex items-center gap-3 text-gray-800 dark:text-gray-400">
-                  <MapPin size={18} />
-                  <span>Available for remote work</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl border border-white/50 dark:border-gray-700">
-              <h3 className="text-lg font-medium text-black dark:text-white mb-2">Availability</h3>
-              <p className="text-gray-800 dark:text-gray-400 text-sm leading-relaxed">
-                I'm currently open to freelance projects and full-time opportunities.
-                Typical response time is within 24 hours.
-              </p>
+          <aside className="lg:col-span-2 flex flex-col gap-3 text-sm">
+            <a
+              href="mailto:ryan.kelly4553@gmail.com"
+              className="flex items-center gap-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            >
+              <Mail size={16} />
+              <span>ryan.kelly4553@gmail.com</span>
+            </a>
+            <a
+              href="https://github.com/whos-ryan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            >
+              <Github size={16} />
+              <span>github.com/whos-ryan</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ryan-kelly-841201283/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 py-2 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            >
+              <Linkedin size={16} />
+              <span>LinkedIn</span>
+            </a>
+            <div className="flex items-center gap-3 py-2 text-neutral-500 dark:text-neutral-500">
+              <MapPin size={16} />
+              <span>Bournemouth · Open to remote</span>
             </div>
           </aside>
         </div>

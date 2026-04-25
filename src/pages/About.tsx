@@ -1,4 +1,4 @@
-import { ArrowLeft, Code, Palette, Zap, GraduationCap } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const timeline = [
@@ -9,56 +9,58 @@ const timeline = [
   },
   {
     year: '2024',
-    title: 'First Professional Projects',
-    description: 'Delivered multiple projects working with React, TypeScript, and modern development tools.',
+    title: 'First Real Projects',
+    description: 'Worked on multiple projects with React, TypeScript, and ASP.NET to get a feel for full-stack work.',
   },
   {
     year: '2025',
-    title: 'Expanding Expertise',
-    description: 'Deepened knowledge in full-stack development, cloud services, and performance optimization.',
+    title: 'Going Deeper',
+    description: 'Spent more time on the harder parts — state, APIs, deployment, and writing maintainable code.',
   },
   {
     year: '2026',
-    title: 'Building & Growing',
-    description: 'Continuing to take on challenging projects and refine my craft as an engineer.',
+    title: 'Looking for a Role',
+    description: 'Building portfolio projects and applying for my first junior developer role.',
   },
 ];
 
 const techStack = [
-  { icon: Code, label: 'React & TypeScript', description: 'Building modern, type-safe user interfaces' },
-  { icon: Palette, label: 'Tailwind CSS', description: 'Crafting responsive, utility-first designs' },
-  { icon: Zap, label: 'Node.js & APIs', description: 'Developing performant server-side solutions' },
-  { icon: GraduationCap, label: 'Continuous Learning', description: 'Always exploring new technologies and patterns' },
+  { label: 'React & TypeScript', description: 'My main day-to-day stack for building UI.' },
+  { label: 'Tailwind CSS', description: 'Utility-first styling. Most of my recent work uses it.' },
+  { label: 'C# / ASP.NET', description: 'How I learned the backend — full-stack Recipe Web app was built on it.' },
+  { label: 'Git / GitHub', description: 'Version control and code review, day-to-day.' },
 ];
 
 export function About() {
   return (
-    <main className="pt-24 pb-20 px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Back link */}
+    <main className="pt-32 pb-24 px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-gray-800 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors mb-16"
         >
-          <ArrowLeft size={18} />
-          Back to Home
+          <ArrowLeft size={16} />
+          Back to home
         </Link>
 
-        {/* Header */}
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl mb-6 text-black dark:text-white text-balance">
-            About Me
+        <div className="mb-20">
+          <p className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-3">
+            About
+          </p>
+          <h1 className="text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-neutral-100 mb-8 font-medium">
+            About me
           </h1>
-          <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-3xl">
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
             I'm Ryan Kelly, a junior developer based in Bournemouth. I like figuring out how things work,
             shipping projects end-to-end, and writing code that someone else can pick up without cursing my name.
           </p>
         </div>
 
-        {/* Bio */}
         <section className="mb-20">
-          <h2 className="text-2xl mb-6 text-black dark:text-white">My Story</h2>
-          <div className="flex flex-col gap-4 text-gray-800 dark:text-gray-300 leading-relaxed">
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-6 uppercase tracking-wider">
+            Story
+          </h2>
+          <div className="flex flex-col gap-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
             <p>
               I started coding in 2023 and quickly fell into the part of the work where design and engineering meet — turning
               a rough idea into something that actually works in a browser.
@@ -70,60 +72,51 @@ export function About() {
           </div>
         </section>
 
-        {/* Tech Stack */}
         <section className="mb-20">
-          <h2 className="text-2xl mb-8 text-black dark:text-white">What I Work With</h2>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {techStack.map((tech, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-4 p-6 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl border border-white/50 dark:border-gray-700"
-              >
-                <div className="w-10 h-10 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center shrink-0">
-                  <tech.icon className="text-white" size={20} />
-                </div>
-                <div>
-                  <h3 className="text-black dark:text-white mb-1">{tech.label}</h3>
-                  <p className="text-sm text-gray-800 dark:text-gray-400">{tech.description}</p>
-                </div>
-              </div>
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-6 uppercase tracking-wider">
+            What I work with
+          </h2>
+          <ul className="divide-y divide-neutral-200 dark:divide-neutral-800 border-y border-neutral-200 dark:border-neutral-800">
+            {techStack.map((tech) => (
+              <li key={tech.label} className="grid grid-cols-1 sm:grid-cols-3 gap-2 py-5">
+                <span className="text-neutral-900 dark:text-neutral-100 font-medium">{tech.label}</span>
+                <span className="sm:col-span-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  {tech.description}
+                </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
-        {/* Timeline */}
         <section className="mb-20">
-          <h2 className="text-2xl mb-8 text-black dark:text-white">My Journey</h2>
-          <div className="flex flex-col gap-8">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 bg-blue-600 dark:bg-blue-500 rounded-full shrink-0 mt-1.5" />
-                  {index < timeline.length - 1 && (
-                    <div className="w-px flex-1 bg-gray-200 dark:bg-gray-700 mt-2" />
-                  )}
+          <h2 className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-6 uppercase tracking-wider">
+            Timeline
+          </h2>
+          <ul className="divide-y divide-neutral-200 dark:divide-neutral-800 border-y border-neutral-200 dark:border-neutral-800">
+            {timeline.map((item) => (
+              <li key={item.year} className="grid grid-cols-1 sm:grid-cols-4 gap-2 py-6">
+                <span className="text-sm font-mono text-neutral-500 dark:text-neutral-500">{item.year}</span>
+                <div className="sm:col-span-3">
+                  <h3 className="text-neutral-900 dark:text-neutral-100 font-medium mb-1">{item.title}</h3>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.description}</p>
                 </div>
-                <div className="pb-8">
-                  <span className="text-sm text-blue-600 dark:text-blue-500 font-medium">{item.year}</span>
-                  <h3 className="text-lg text-black dark:text-white mt-1 mb-2">{item.title}</h3>
-                  <p className="text-gray-800 dark:text-gray-400">{item.description}</p>
-                </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
-        {/* CTA */}
-        <section className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/50 dark:border-gray-700 text-center">
-          <h2 className="text-2xl mb-4 text-black dark:text-white">Want to work together?</h2>
-          <p className="text-gray-800 dark:text-gray-300 mb-6">
-            I'm always open to new opportunities and interesting projects.
+        <section className="border border-neutral-200 dark:border-neutral-800 rounded-lg p-10">
+          <h2 className="text-2xl text-neutral-900 dark:text-neutral-100 font-medium mb-3">
+            Want to talk?
+          </h2>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+            I'm looking for my first junior developer role. Drop me a message.
           </p>
           <Link
             to="/contact"
-            className="inline-flex px-8 py-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-neutral-100 text-neutral-50 dark:text-neutral-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Get in Touch
+            Get in touch
           </Link>
         </section>
       </div>

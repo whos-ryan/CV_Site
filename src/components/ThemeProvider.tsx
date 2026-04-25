@@ -1,6 +1,4 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
-import DarkVeil from './DarkBackground';
-import Grainient from './LightBackground';
 
 type Theme = 'light' | 'dark';
 
@@ -25,7 +23,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     localStorage.setItem('theme', theme);
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -40,32 +38,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {theme === 'light' && (
-        <div style={{ 
-          width: '100%', 
-          height: '100vh', 
-          position: 'fixed', 
-          top: 0, 
-          left: 0, 
-          zIndex: 0,
-          pointerEvents: 'none'
-        }}>
-          <Grainient />
-        </div>
-      )}
-      {theme === 'dark' && (
-        <div style={{ 
-          width: '100%', 
-          height: '100vh', 
-          position: 'fixed', 
-          top: 0, 
-          left: 0, 
-          zIndex: 0,
-          pointerEvents: 'none'
-        }}>
-          <DarkVeil />
-        </div>
-      )}
       {children}
     </ThemeContext.Provider>
   );
