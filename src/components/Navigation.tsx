@@ -1,4 +1,4 @@
-import { Menu, X, Moon, Sun, Code } from 'lucide-react';
+import { Menu, X, Moon, Sun, Code, Github } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from './ThemeProvider';
@@ -51,6 +51,15 @@ export function Navigation() {
               </nav>
               
               <div className="flex items-center gap-3 ml-2 pl-6 border-l border-slate-200 dark:border-slate-800">
+                <a
+                  href="https://github.com/whos-ryan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
+                  aria-label="GitHub profile"
+                >
+                  <Github size={18} />
+                </a>
                 <button
                   onClick={toggleTheme}
                   className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
@@ -81,6 +90,15 @@ export function Navigation() {
               <div className="flex flex-col gap-4 px-2">
                 <Link to="/#work" onClick={() => setIsOpen(false)} className="text-base font-medium text-slate-600 dark:text-slate-300">Work</Link>
                 <Link to="/about" onClick={() => setIsOpen(false)} className="text-base font-medium text-slate-600 dark:text-slate-300">About</Link>
+                <a
+                  href="https://github.com/whos-ryan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex items-center gap-2 text-base font-medium text-slate-600 dark:text-slate-300"
+                >
+                  <Github size={18} /> GitHub
+                </a>
                 <Link to="/contact" onClick={() => setIsOpen(false)} className="px-5 py-2.5 bg-blue-600 text-white rounded-full w-full text-center font-bold">
                   Contact
                 </Link>

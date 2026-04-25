@@ -1,30 +1,45 @@
-import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Github, ExternalLink } from 'lucide-react';
 import { useRef, useState, useEffect, useCallback } from 'react';
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+  repoHref?: string;
+  stack: string[];
+};
+
+const projects: Project[] = [
   {
     title: 'Marcus Aurelius AI Chatbot',
-    description: 'This was a small university collaborative project that we created for our L5 Software Engineering Course.',
-    image: 'icons/marcus-aurelius.png',
+    description:
+      'University group project for our L5 Software Engineering module. A chatbot that answers in the voice of Marcus Aurelius, drawing from Stoic texts. I worked on the React client and helped wire it up to the API.',
+    image: '/icons/marcus-aurelius.png',
     href: 'https://marcusaurelius-client.vercel.app',
+    // TODO: paste the GitHub repo URL here
+    repoHref: '',
+    stack: ['React', 'TypeScript', 'AI API'],
   },
   {
     title: 'Recipe Web',
-    description: 'A small full stack project made with C#, HTML, and CSS.',
-    image: 'icons/recipeManager.png',
+    description:
+      'Full-stack recipe manager — users can add, browse, and save recipes. My first proper full-stack build, which taught me a lot about routing, models, and persisting data.',
+    image: '/icons/recipeManager.png',
     href: 'https://recipeweb-production.up.railway.app',
+    // TODO: paste the GitHub repo URL here
+    repoHref: '',
+    stack: ['C#', 'ASP.NET', 'HTML', 'CSS'],
   },
   {
     title: 'Assignment Tracker',
-    description: 'A small web application to help student track their grades within each individual module. Built using React, TypeScript, and CSS',
-    image: 'icons/AssignmentAppTracker.png',
+    description:
+      'A web app that helps students track grades and weighted averages across each module. Built end-to-end on my own to practise component design and state management in React.',
+    image: '/icons/AssignmentAppTracker.png',
     href: 'https://app-tracker-black.vercel.app',
-  },
-  {
-    title: 'Project Four',
-    description: 'A brief description of this project and the technologies used.',
-    image: '',
-    href: '#',
+    // TODO: paste the GitHub repo URL here
+    repoHref: '',
+    stack: ['React', 'TypeScript', 'CSS'],
   },
 ];
 
@@ -126,14 +141,17 @@ export function Projects() {
             }}
           >
             {projects.map((project, index) => (
-              <a
+              <div
                 key={index}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex-shrink-0 w-[85%] md:w-[48%] lg:w-[42%] snap-start bg-white/30 dark:bg-gray-900/30 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-blue-600 dark:hover:border-blue-500 transition-colors"
+                className="group flex-shrink-0 w-[85%] md:w-[48%] lg:w-[42%] snap-start bg-white/30 dark:bg-gray-900/30 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-blue-600 dark:hover:border-blue-500 transition-colors flex flex-col"
               >
-                <div className="aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${project.title} live demo`}
+                  className="block aspect-video bg-gray-100 dark:bg-gray-800 relative overflow-hidden"
+                >
                   {project.image ? (
                     <img
                       src={project.image}
@@ -145,22 +163,54 @@ export function Projects() {
                       <div className="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-lg" />
                     </div>
                   )}
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
+                </a>
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <div className="flex items-start justify-between gap-3">
                     <h3 className="text-xl text-black dark:text-white font-medium">
                       {project.title}
                     </h3>
                     <ArrowUpRight
                       size={20}
-                      className="text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors"
+                      className="text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors shrink-0 mt-1"
                     />
                   </div>
-                  <p className="text-gray-800 dark:text-gray-300">
+                  <p className="text-slate-800 dark:text-gray-300 flex-1">
                     {project.description}
                   </p>
+                  <ul className="flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
+                      <li
+                        key={tech}
+                        className="px-2.5 py-1 text-xs rounded-full bg-blue-600/10 dark:bg-blue-500/15 text-blue-700 dark:text-blue-300 border border-blue-600/20 dark:border-blue-500/30"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center gap-4 pt-2 border-t border-gray-200 dark:border-gray-700">
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                    >
+                      <ExternalLink size={16} />
+                      Live demo
+                    </a>
+                    {project.repoHref && (
+                      <a
+                        href={project.repoHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                      >
+                        <Github size={16} />
+                        Source
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
 

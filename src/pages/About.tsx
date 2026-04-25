@@ -50,8 +50,8 @@ export function About() {
             About Me
           </h1>
           <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed max-w-3xl">
-            I'm Ryan Kelly, a software engineer passionate about building clean, performant, and user-friendly web experiences.
-            I enjoy turning complex problems into simple, elegant solutions.
+            I'm Ryan Kelly, a junior developer based in Bournemouth. I like figuring out how things work,
+            shipping projects end-to-end, and writing code that someone else can pick up without cursing my name.
           </p>
         </div>
 
@@ -60,12 +60,12 @@ export function About() {
           <h2 className="text-2xl mb-6 text-black dark:text-white">My Story</h2>
           <div className="flex flex-col gap-4 text-gray-800 dark:text-gray-300 leading-relaxed">
             <p>
-              My interest in technology started early, but it was the intersection of design and engineering that truly captivated me.
-              I love the process of taking an idea from concept to a polished, working product.
+              I started coding in 2023 and quickly fell into the part of the work where design and engineering meet — turning
+              a rough idea into something that actually works in a browser.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new tools and frameworks, contributing to open-source projects,
-              or working on personal side projects that push my skills further.
+              When I'm not coding, you'll usually find me chipping away at a side project, breaking and re-fixing things to
+              understand them, or learning whatever piece of the stack I haven't touched yet.
             </p>
           </div>
         </section>

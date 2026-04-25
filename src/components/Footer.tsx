@@ -10,7 +10,7 @@ const footerNavLinks = [
 const footerConnectLinks = [
   { label: 'GitHub', href: 'https://github.com/whos-ryan' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ryan-kelly-841201283/' },
-  { label: 'Email', href: 'mailto:ryankelly4553@gmail.com' },
+  { label: 'Email', href: 'mailto:ryan.kelly4553@gmail.com' },
 ];
 
 export function Footer() {
@@ -27,7 +27,7 @@ export function Footer() {
               <span className="ml-3 font-semibold">Rhyze</span>
             </Link>
             <p className="text-gray-700 dark:text-gray-500 mb-6">
-              Building exceptional digital experiences with precision and care.
+              Junior developer based in Bournemouth. Looking for my first dev role.
             </p>
             <div className="flex gap-4">
               <a href="https://github.com/whos-ryan" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="GitHub">
@@ -36,7 +36,7 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/ryan-kelly-841201283/" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:ryankelly4553@gmail.com" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
+              <a href="mailto:ryan.kelly4553@gmail.com" className="w-10 h-10 bg-transparent dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>

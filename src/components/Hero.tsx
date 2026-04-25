@@ -1,10 +1,10 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Github } from 'lucide-react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
 import { Link } from 'react-router-dom';
 
 export function Hero() {
   const { displayedText: nameText, isComplete: nameComplete } = useTypingEffect('Ryan Kelly', 90, 400);
-  const { displayedText: roleText, isComplete: roleComplete } = useTypingEffect('Software Engineer.', 70, 1400);
+  const { displayedText: roleText, isComplete: roleComplete } = useTypingEffect('Junior Developer.', 70, 1400);
 
   return (
     <section className="pt-32 pb-20 px-6 lg:px-8">
@@ -24,19 +24,28 @@ export function Hero() {
               )}
             </span>
           </h1>
-          <p className="text-xl text-[#1E293B] dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-            Crafting exceptional digital experiences with clean code and beautiful design. 
-            
+          <p className="text-xl text-slate-800 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+            Bournemouth-based developer building full-stack projects with React, TypeScript, and C#.
+            Currently looking for my first junior developer role.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/about" className="w-full sm:w-auto flex justify-center">
-              <button className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:scale-105 transform transition duration-150 flex items-center justify-center gap-2">
+              <button className="w-full sm:w-auto px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:scale-105 transform transition duration-150 flex items-center justify-center gap-2">
                 About Me
                 <ArrowRight size={20} />
               </button>
             </Link>
+            <a
+              href="https://github.com/whos-ryan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white rounded-md hover:scale-105 transform transition duration-150 flex items-center justify-center gap-2"
+            >
+              <Github size={20} />
+              View GitHub
+            </a>
           </div>
-        </div> 
+        </div>
       </div>
     </section>
   );
