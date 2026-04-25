@@ -1,50 +1,37 @@
 import { ArrowRight, Github } from 'lucide-react';
-import { useTypingEffect } from '../hooks/useTypingEffect';
 import { Link } from 'react-router-dom';
 
 export function Hero() {
-  const { displayedText: nameText, isComplete: nameComplete } = useTypingEffect('Ryan Kelly', 90, 400);
-  const { displayedText: roleText, isComplete: roleComplete } = useTypingEffect('Junior Developer.', 70, 1400);
-
   return (
-    <section className="pt-32 pb-20 px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 text-black dark:text-white">
-            <span>
-              {nameText}
-              {!nameComplete && (
-                <span className="inline-block w-[3px] h-[0.8em] bg-black dark:bg-white ml-1 align-baseline animate-pulse" />
-              )}
-            </span>
-            <span className="block text-blue-600 dark:text-blue-500">
-              {roleText}
-              {nameComplete && !roleComplete && (
-                <span className="inline-block w-[3px] h-[0.8em] bg-blue-600 dark:bg-blue-500 ml-1 align-baseline animate-pulse" />
-              )}
-            </span>
-          </h1>
-          <p className="text-xl text-slate-800 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-            Bournemouth-based developer building full-stack projects with React, TypeScript, and C#.
-            Currently looking for my first junior developer role.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/about" className="w-full sm:w-auto flex justify-center">
-              <button className="w-full sm:w-auto px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-md hover:scale-105 transform transition duration-150 flex items-center justify-center gap-2">
-                About Me
-                <ArrowRight size={20} />
-              </button>
-            </Link>
-            <a
-              href="https://github.com/whos-ryan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white rounded-md hover:scale-105 transform transition duration-150 flex items-center justify-center gap-2"
-            >
-              <Github size={20} />
-              View GitHub
-            </a>
-          </div>
+    <section className="pt-40 pb-24 px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl">
+        <p className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-6">
+          Junior Developer · Bournemouth
+        </p>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-tight text-neutral-900 dark:text-neutral-100 mb-8 font-medium">
+          Ryan Kelly
+        </h1>
+        <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-10 max-w-2xl leading-relaxed">
+          I build full-stack projects with React, TypeScript, and C#.
+          Currently looking for my first junior developer role.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link
+            to="/about"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-neutral-900 dark:bg-neutral-100 text-neutral-50 dark:text-neutral-900 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            About me
+            <ArrowRight size={16} />
+          </Link>
+          <a
+            href="https://github.com/whos-ryan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100 rounded-lg text-sm font-medium hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+          >
+            <Github size={16} />
+            View GitHub
+          </a>
         </div>
       </div>
     </section>

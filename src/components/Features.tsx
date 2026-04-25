@@ -25,30 +25,28 @@ const skills = [
 
 export function Features() {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-8 transition-colors">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
-            What I Work With
-          </h2>
-          <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
-            The tools and skills I bring to a team
+    <section id="skills" className="py-24 px-6 lg:px-8 border-t border-neutral-200 dark:border-neutral-800">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-16">
+          <p className="text-sm font-mono text-neutral-500 dark:text-neutral-500 mb-3">
+            02 / Skills
           </p>
+          <h2 className="text-3xl md:text-4xl tracking-tight text-neutral-900 dark:text-neutral-100 font-medium">
+            What I work with
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((skill, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {skills.map((skill) => (
             <div
-              key={index}
-              className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md p-8 rounded-xl border border-white/50 dark:border-gray-700 hover:border-blue-600 dark:hover:border-blue-500 transition-colors group"
+              key={skill.title}
+              className="p-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg"
             >
-              <div className="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <skill.icon className="text-white" size={24} />
-              </div>
-              <h3 className="text-xl mb-3 text-black dark:text-white">
+              <skill.icon className="text-neutral-900 dark:text-neutral-100 mb-5" size={20} strokeWidth={1.75} />
+              <h3 className="text-base text-neutral-900 dark:text-neutral-100 font-medium mb-2">
                 {skill.title}
               </h3>
-              <p className="text-slate-800 dark:text-gray-300">
+              <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
                 {skill.description}
               </p>
             </div>
