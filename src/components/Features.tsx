@@ -1,25 +1,25 @@
-import { Code, Palette, Zap, Users } from 'lucide-react';
+import { Code, Server, GitBranch, BookOpen } from 'lucide-react';
 
 const skills = [
   {
     icon: Code,
-    title: 'Development',
-    description: 'Building scalable web applications with React, TypeScript, and modern frameworks.',
+    title: 'Frontend',
+    description: 'React, TypeScript, and Tailwind. Comfortable building responsive components and managing state.',
   },
   {
-    icon: Palette,
-    title: 'Design',
-    description: 'Creating intuitive user interfaces with a focus on aesthetics and usability.',
+    icon: Server,
+    title: 'Full-stack',
+    description: 'Built full-stack apps with C# / ASP.NET and dabbled in Node. Learning how the front and back fit together.',
   },
   {
-    icon: Zap,
-    title: 'Performance',
-    description: 'Optimizing for speed and efficiency to deliver seamless user experiences.',
+    icon: GitBranch,
+    title: 'Tools & Workflow',
+    description: 'Day-to-day with Git, GitHub, and Vite. Comfortable in the terminal and reading other people’s code.',
   },
   {
-    icon: Users,
-    title: 'Collaboration',
-    description: 'Working closely with teams to bring ideas to life from concept to launch.',
+    icon: BookOpen,
+    title: 'Always Learning',
+    description: 'Currently digging into testing, accessibility, and writing cleaner, more maintainable code.',
   },
 ];
 
@@ -29,10 +29,10 @@ export function Features() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4 text-black dark:text-white">
-            What I Do
+            What I Work With
           </h2>
           <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
-            Combining technical expertise with creative vision
+            The tools and skills I bring to a team
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export function Features() {
               <h3 className="text-xl mb-3 text-black dark:text-white">
                 {skill.title}
               </h3>
-              <p className="text-[#1E293B] dark:text-gray-300">
+              <p className="text-slate-800 dark:text-gray-300">
                 {skill.description}
               </p>
             </div>
