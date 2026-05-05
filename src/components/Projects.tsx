@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     title: 'Notes Valut',
     description:
-      'A simple notes app built with React, TypeScript, and CSS. Using Neon as a database.',
+      'A focused notes workspace built with React and TypeScript, backed by Neon for persistence. It combines structured pages, quick snippets, and calendar-aware planning in one minimal interface, so users can capture ideas fast, organize content clearly, and track tasks without switching between multiple tools.',
     image: '/icons/notes-valut.png',
     href: 'https://notes-seven-snowy.vercel.app',
     repoHref: 'https://github.com/whos-ryan/notes',
