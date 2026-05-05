@@ -21,14 +21,13 @@ const projects: Project[] = [
     stack: ['React', 'TypeScript', 'AI API'],
   },
   {
-    title: 'Recipe Web',
+    title: 'Notes Valut',
     description:
-      'Full-stack recipe manager — users can add, browse, and save recipes. My first proper full-stack build, which taught me a lot about routing, models, and persisting data.',
-    image: '/icons/recipeManager.png',
-    href: 'https://recipeweb-production.up.railway.app',
-    // TODO: paste the GitHub repo URL here
-    repoHref: '',
-    stack: ['C#', 'ASP.NET', 'HTML', 'CSS'],
+      'A simple notes app built with React, TypeScript, and CSS. Using Neon as a database.',
+    image: '/icons/notes-valut.png',
+    href: 'https://notes-seven-snowy.vercel.app',
+    repoHref: 'https://github.com/whos-ryan/notes',
+    stack: ['React', 'TypeScript', 'CSS', 'Neon'],
   },
   {
     title: 'Assignment Tracker',
